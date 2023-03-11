@@ -3,6 +3,7 @@ public class Main {
         task1();
         task2();
         task3();
+        task4();
     }
     public static void task1 () {
         System.out.println("Задача 1");
@@ -34,4 +35,15 @@ public class Main {
         }
         System.out.println();
     }
-}
+    public static void task4() {
+        System.out.println("Задача 4");
+        int salary = 65535;
+        int total = 0;
+        while (total < 1_000_000) {
+            total = total + total/100;
+            total = total + salary;
+            System.out.println(total);
+        }
+        System.out.println();
+    }
+    }
