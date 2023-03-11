@@ -2,6 +2,7 @@ public class Main {
     public static void main(String[] args) {
         task1();
         task2();
+        task3();
     }
     public static void task1 () {
         System.out.println("Задача 1");
@@ -14,12 +15,23 @@ public class Main {
         System.out.println("Задача 2");
         int salary = 65535;
         int total = 0;
-        for (int i = 0; i < 12; i++) {
+        for (int i = 1; i <= 12; i++) {
             total = total + total/100;
             total = total + salary;
             System.out.println("Месяц " + i + " Итого " + total);
         }
         System.out.println(total);
+        System.out.println();
+    }
+    public static void task3 () {
+        System.out.println("Задача 3");
+        int salary = 65535;
+        int total = 0;
+        for ( ; total < 1_000_000; ) {
+            total = total + total/100;
+            total = total + salary;
+            System.out.println(total);
+        }
         System.out.println();
     }
 }
