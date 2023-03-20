@@ -5,6 +5,7 @@ public class Main {
         task3();
         task4();
         task5();
+        task6();
     }
     public static void task1 () {
         System.out.println("Задача 1");
@@ -60,7 +61,19 @@ public class Main {
         System.out.println(weights[january]);
         for (int i = 0; i < weights.length; i++) {
             System.out.println(weights[i]);
-
         }
+        System.out.println();
+    }
+    public static void task6() {
+        System.out.println("Задача 6");
+        String phone = "604157537";
+        if (phone.length() == 10) {
+            phone = '7' + phone;
+        } else if (phone.length() > 11) {
+            throw new RuntimeException("Телефон слишком длинный");
+        } else if (phone.length() < 10) {
+            throw new RuntimeException("Телефон слишком короткий");
+        }
+        System.out.println("phone = " + phone);
     }
     }
