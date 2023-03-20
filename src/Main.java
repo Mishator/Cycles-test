@@ -6,6 +6,7 @@ public class Main {
         task4();
         task5();
         task6();
+        task7();
     }
     public static void task1 () {
         System.out.println("Задача 1");
@@ -66,7 +67,7 @@ public class Main {
     }
     public static void task6() {
         System.out.println("Задача 6");
-        String phone = "604157537";
+        String phone = "9604157537";
         if (phone.length() == 10) {
             phone = '7' + phone;
         } else if (phone.length() > 11) {
@@ -75,5 +76,25 @@ public class Main {
             throw new RuntimeException("Телефон слишком короткий");
         }
         System.out.println("phone = " + phone);
+        System.out.println();
     }
+
+    public static void task7() {
+        System.out.println("Задача 7");
+        String phone = "+79604157537";
+        phone = phone.replace("-", "");
+        phone = phone.replace(" ", "");
+        phone = phone.replace("+", "");
+
+        if (phone.length() == 10) {
+            phone = '7' + phone;
+        } else if (phone.length() > 11) {
+            throw new RuntimeException("Телефон слишком длинный");
+        } else if (phone.length() < 10) {
+            throw new RuntimeException("Телефон слишком короткий");
+        } else if (phone.length() == 11 && phone.charAt(0) != '7') {
+            throw new RuntimeException("Среди нас посторонний!");
+        }
+        System.out.println("phone = " + phone);
     }
+}
